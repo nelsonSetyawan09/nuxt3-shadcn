@@ -15,6 +15,14 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
+"@antfu/install-pkg@^0.4.0":
+  version "0.4.1"
+  resolved "https://registry.npmjs.org/@antfu/install-pkg/-/install-pkg-0.4.1.tgz"
+  integrity sha512-T7yB5QNG29afhWVkVq7XeIMBa5U/vs9mX69YqayXypPRmYzUmzwnYltplHmPtZ4HPCn+sQKeXW8I47wCbuBOjw==
+  dependencies:
+    package-manager-detector "^0.2.0"
+    tinyexec "^0.3.0"
+
 "@antfu/utils@^0.7.10":
   version "0.7.10"
   resolved "https://registry.npmjs.org/@antfu/utils/-/utils-0.7.10.tgz"
@@ -355,6 +363,38 @@
     "@floating-ui/utils" "^0.2.8"
     vue-demi ">=0.13.0"
 
+"@iconify/collections@^1.0.455":
+  version "1.0.467"
+  resolved "https://registry.npmjs.org/@iconify/collections/-/collections-1.0.467.tgz"
+  integrity sha512-Q9DZJonY/1sBhV0gEC+ZUqVs78us7hbdeA2TQgU7LmCM0DjsTfKsKf7OHZ/w2/oi96vgOu83OYngdzPN1Jtf8A==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/types@*", "@iconify/types@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/@iconify/types/-/types-2.0.0.tgz"
+  integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==
+
+"@iconify/utils@^2.1.32":
+  version "2.1.33"
+  resolved "https://registry.npmjs.org/@iconify/utils/-/utils-2.1.33.tgz"
+  integrity sha512-jP9h6v/g0BIZx0p7XGJJVtkVnydtbgTgt9mVNcGDYwaa7UhdHdI9dvoq+gKj9sijMSJKxUPEG2JyjsgXjxL7Kw==
+  dependencies:
+    "@antfu/install-pkg" "^0.4.0"
+    "@antfu/utils" "^0.7.10"
+    "@iconify/types" "^2.0.0"
+    debug "^4.3.6"
+    kolorist "^1.8.0"
+    local-pkg "^0.5.0"
+    mlly "^1.7.1"
+
+"@iconify/vue@4.1.3-beta.1":
+  version "4.1.3-beta.1"
+  resolved "https://registry.npmjs.org/@iconify/vue/-/vue-4.1.3-beta.1.tgz"
+  integrity sha512-N7iEOnWfhjbMqiyGMhotJKip23nrK5l3+T1hQwpEjKeMD2o4zOjm8zmeEfOOH81EXllhhOm7upR8jcH499YRWA==
+  dependencies:
+    "@iconify/types" "^2.0.0"
+
 "@internationalized/date@^3.5.4":
   version "3.5.6"
   resolved "https://registry.npmjs.org/@internationalized/date/-/date-3.5.6.tgz"
@@ -510,7 +550,7 @@
   resolved "https://registry.npmjs.org/@nuxt/devalue/-/devalue-2.0.2.tgz"
   integrity sha512-GBzP8zOc7CGWyFQS6dv1lQz8VVpz5C2yRszbXufwG/9zhStTIH50EtD87NmWbTMwXDvZLNg8GIpb1UFdH93JCA==
 
-"@nuxt/devtools-kit@1.5.2":
+"@nuxt/devtools-kit@^1.4.1", "@nuxt/devtools-kit@1.5.2":
   version "1.5.2"
   resolved "https://registry.npmjs.org/@nuxt/devtools-kit/-/devtools-kit-1.5.2.tgz"
   integrity sha512-IMbwflL/JLuK1JcM5yWKa+T5JGjwnCACZJw218/8bUTt/uTVgtkMueE+1/p9rhCWxvGQiT3xnCIXKhEg7xP58Q==
@@ -578,7 +618,26 @@
     which "^3.0.1"
     ws "^8.18.0"
 
-"@nuxt/kit@^3.11.2", "@nuxt/kit@^3.12.3", "@nuxt/kit@^3.13.1", "@nuxt/kit@^3.13.2", "@nuxt/kit@3.13.2":
+"@nuxt/icon@^1.5.4":
+  version "1.5.4"
+  resolved "https://registry.npmjs.org/@nuxt/icon/-/icon-1.5.4.tgz"
+  integrity sha512-GHyfvouaVCsNYMZ6FQp1FWU7Mm6GnQ7bbOOtl6uQ6uCTFV+TgyQbahuWyIUOrOuio+gmU9EuaHwW5MEBov8cWw==
+  dependencies:
+    "@iconify/collections" "^1.0.455"
+    "@iconify/types" "^2.0.0"
+    "@iconify/utils" "^2.1.32"
+    "@iconify/vue" "4.1.3-beta.1"
+    "@nuxt/devtools-kit" "^1.4.1"
+    "@nuxt/kit" "^3.13.0"
+    consola "^3.2.3"
+    fast-glob "^3.3.2"
+    local-pkg "^0.5.0"
+    mlly "^1.7.1"
+    ohash "^1.1.4"
+    pathe "^1.1.2"
+    std-env "^3.7.0"
+
+"@nuxt/kit@^3.11.2", "@nuxt/kit@^3.12.3", "@nuxt/kit@^3.13.0", "@nuxt/kit@^3.13.1", "@nuxt/kit@^3.13.2", "@nuxt/kit@3.13.2":
   version "3.13.2"
   resolved "https://registry.npmjs.org/@nuxt/kit/-/kit-3.13.2.tgz"
   integrity sha512-KvRw21zU//wdz25IeE1E5m/aFSzhJloBRAQtv+evcFeZvuroIxpIQuUqhbzuwznaUwpiWbmwlcsp5uOWmi4vwA==
@@ -4947,6 +5006,11 @@ tiny-invariant@^1.1.0:
   resolved "https://registry.npmjs.org/tiny-invariant/-/tiny-invariant-1.3.3.tgz"
   integrity sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg==
 
+tinyexec@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.npmjs.org/tinyexec/-/tinyexec-0.3.0.tgz"
+  integrity sha512-tVGE0mVJPGb0chKhqmsoosjsS+qUnJVGJpZgsHYQcGoPlG3B51R3PouqTgEGH2Dc9jjFyOqOpix6ZHNMXp1FZg==
+
 tinyglobby@^0.2.6:
   version "0.2.9"
   resolved "https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.9.tgz"
@@ -5370,7 +5434,7 @@ vue-router@^4.4.0, vue-router@^4.4.5, vue-router@latest:
   dependencies:
     "@vue/devtools-api" "^6.6.4"
 
-"vue@^2.7.0 || ^3.0.0", "vue@^2.7.0 || ^3.2.25", vue@^3.0.0, "vue@^3.0.0-0 || ^2.6.0", vue@^3.2.0, vue@^3.2.25, vue@^3.3.4, vue@^3.5.5, "vue@>= 3.2.0", "vue@>=2.7 || >=3", vue@>=3.0.1, vue@3.5.11, vue@latest:
+"vue@^2.7.0 || ^3.0.0", "vue@^2.7.0 || ^3.2.25", vue@^3.0.0, "vue@^3.0.0-0 || ^2.6.0", vue@^3.2.0, vue@^3.2.25, vue@^3.3.4, vue@^3.5.5, "vue@>= 3.2.0", "vue@>=2.7 || >=3", vue@>=3, vue@>=3.0.1, vue@3.5.11, vue@latest:
   version "3.5.11"
   resolved "https://registry.npmjs.org/vue/-/vue-3.5.11.tgz"
   integrity sha512-/8Wurrd9J3lb72FTQS7gRMNQD4nztTtKPmuDuPuhqXmmpD6+skVjAeahNpVzsuky6Sy9gy7wn8UadqPtt9SQIg==

@@ -4,6 +4,6 @@ const loading = ref(false);
 
 <template>
   <div>
-    <Button>Click Me</Button>
+    <Button variant="destructive">DASHBOARD!! </Button>
   </div>
 </template>
