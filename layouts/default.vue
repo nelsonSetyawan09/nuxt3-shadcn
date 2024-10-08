@@ -3,7 +3,7 @@
     <div>
       <Sidebar />
     </div>
-    <div>
+    <div class="flex-1 p-2">
       <slot />
     </div>
   </div>
