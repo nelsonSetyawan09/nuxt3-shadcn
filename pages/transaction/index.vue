@@ -23,11 +23,37 @@ const tabList = [
     component: resolveComponent("TabsYear"),
   },
 ];
-const tabDefault = "today";
+
+const cards = [
+  {
+    title: "Sales",
+    progression: 12,
+    amount: 85,
+    label: "View sales",
+    description: "Sales of March 2024",
+    icon: "icon-park-outline:sales-report",
+  },
+  {
+    title: "Refund",
+    progression: 8,
+    amount: 85,
+    label: "View refunds",
+    description: "Refunds since beginning of year",
+    icon: "ri:refund-2-fill",
+  },
+  {
+    title: "Payout",
+    progression: 14,
+    amount: 85,
+    label: "View payouts",
+    description: "Payout of this week",
+    icon: "uiw:pay",
+  },
+];
 </script>
 
 <template>
-  <Tabs :default-value="tabDefault">
+  <Tabs default-value="today">
     <TabsList>
       <TabsTrigger
         v-for="(tab, index) in tabList"
@@ -42,7 +68,7 @@ const tabDefault = "today";
       :key="`tab-content-${index}`"
       :value="tab.code"
     >
-      <component :is="tab.component" />
+      <component :is="tab.component" :cards="cards" />
     </TabsContent>
   </Tabs>
 </template>
